@@ -124,6 +124,10 @@ header nav .form i{
     right: 0;
 }
 
+header nav .toggle-menu{
+    color: white;
+}
+
 
 
 /* End Header */
