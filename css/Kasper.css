@@ -1,0 +1,130 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+
+/* Start Variable */
+
+:root{
+    --main-color : #19c8fa;
+}
+/* End Variable */
+/* End global  Rules */
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 600px; */
+}
+
+/* Small */
+@media (min-width : 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* Meduim */
+@media (min-width : 990px){
+    .container{
+        width: 970px;
+    }
+    
+}
+
+/* Large */
+@media (min-width : 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* End global  Rules */
+
+
+/* Start Header */
+header{
+
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container::after{
+    content: " ";
+    height: 1px;
+    background-color: #a2a2a2;
+    position: absolute;
+    width: calc(100% - 30px);
+    bottom: 0;
+    left: 15px;
+}
+
+header .logo img{
+    height: 40px;
+}
+
+header nav{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    font-size: 14px;
+    list-style: none;
+    padding: 40px 10px;
+    position: relative;
+    z-index: 3;
+} 
+header nav ul li .active,
+header nav ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+header nav .form{
+    position: relative;
+    height: 30px;
+    width: 40px;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+
+header nav .form i{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+
+
+/* End Header */
+
