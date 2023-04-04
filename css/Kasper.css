@@ -170,6 +170,7 @@ header nav .form i{
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+    cursor: pointer;
 }
 /* End Header */
 
@@ -202,11 +203,19 @@ header nav .form i{
     background-color: var(--tranparent-color);
     display: flex;
     justify-content: flex-end;
-
 }
-
 .landing .text .content{
     width: 500px;
+}
+
+@media(max-width : 767px){
+    .landing .text{
+        width: 100%;
+    }
+
+    .landing .text .content{
+        width: 100%;
+    }
 }
 .landing .text .content h2{
     font-size: 32px;
@@ -218,6 +227,48 @@ header nav .form i{
     font-size: 14px;
     line-height: 1.5;
 }
+
+.landing .change-background{
+    position: absolute;
+    color: #ddd;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+@media(max-width : 767px){
+    .landing .change-background{
+        display: none;
+    }
+}
+.landing .slide-left{
+    left: 30px;
+}
+.landing .slide-right{
+    right: 30px;
+}
+
+.landing .bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50);
+    bottom: 30px;
+    display: flex;
+    list-style: none;
+}
+
+.landing .bullets li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.landing .bullets li.active{
+    background-color: var(--tranparent-color);
+    border-color: var(--tranparent-color);
+}
+
 /* End Landing */
 
 
